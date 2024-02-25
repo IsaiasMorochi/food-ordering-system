@@ -4,9 +4,9 @@ import bo.food.ordering.system.order.service.domain.entity.Order;
 
 import java.time.ZonedDateTime;
 
-public class OrderCancelEvent extends OrderEvent {
+public class OrderCancelledEvent extends OrderEvent {
 
-    public OrderCancelEvent(Order order, ZonedDateTime createdAt) {
+    public OrderCancelledEvent(Order order, ZonedDateTime createdAt) {
         super(order, createdAt);
     }
 }
