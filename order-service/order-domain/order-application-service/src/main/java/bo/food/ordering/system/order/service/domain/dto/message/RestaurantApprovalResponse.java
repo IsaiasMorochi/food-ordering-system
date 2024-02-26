@@ -1,12 +1,10 @@
 package bo.food.ordering.system.order.service.domain.dto.message;
 
 import bo.food.ordering.system.domain.vo.OrderApprovalStatus;
-import bo.food.ordering.system.domain.vo.PaymentStatus;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
 
-import java.math.BigDecimal;
 import java.time.Instant;
 import java.util.List;
 
