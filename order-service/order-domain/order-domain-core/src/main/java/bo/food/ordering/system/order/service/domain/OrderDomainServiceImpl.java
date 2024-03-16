@@ -15,7 +15,7 @@ import java.util.List;
 
 @Slf4j
 public class OrderDomainServiceImpl implements OrderDomainService {
-    
+
     private static final String UTC = "UTC";
 
     @Override
@@ -64,13 +64,17 @@ public class OrderDomainServiceImpl implements OrderDomainService {
      * Actualmente tiene una complejidad de n cuadrado en notacion Big-O, se puede optimizar con un hashMap
      */
     private void setOrderProductInformation(Order order, Restaurant restaurant) {
-        order.getItems().forEach(orderItem -> restaurant.getProducts().forEach(restaurantProduct -> {
-            Product currentProduct = orderItem.getProduct();
-            if (currentProduct.equals(restaurantProduct)) {
-                currentProduct.updateWithConfirmedNameAndPrice(restaurantProduct.getName(),
-                        restaurantProduct.getPrice());
-            }
-        }));
+        order.getItems()
+                .forEach(orderItem -> restaurant.getProducts()
+                        .forEach(restaurantProduct -> {
+                            Product currentProduct = orderItem.getProduct();
+                            if (currentProduct.equals(restaurantProduct)) {
+                                currentProduct.updateWithConfirmedNameAndPrice(
+                                        restaurantProduct.getName(),
+                                        restaurantProduct.getPrice()
+                                );
+                            }
+                        }));
     }
 
 }
