@@ -1,6 +1,5 @@
 package bo.food.ordering.system.order.service.dataaccess.order.adapter;
 
-import bo.food.ordering.system.domain.vo.OrderId;
 import bo.food.ordering.system.order.service.domain.vo.TrackingId;
 import bo.food.ordering.system.order.service.dataaccess.order.mapper.OrderDataAccessMapper;
 import bo.food.ordering.system.order.service.dataaccess.order.repository.OrderJpaRepository;

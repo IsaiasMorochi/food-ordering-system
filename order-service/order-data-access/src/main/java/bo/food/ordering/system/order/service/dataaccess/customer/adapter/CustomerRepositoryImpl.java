@@ -6,7 +6,6 @@ import bo.food.ordering.system.order.service.domain.entity.Customer;
 import bo.food.ordering.system.order.service.domain.ports.output.repository.CustomerRepository;
 import org.springframework.stereotype.Component;
 
-import jakarta.transaction.Transactional;
 import java.util.Optional;
 import java.util.UUID;
 
