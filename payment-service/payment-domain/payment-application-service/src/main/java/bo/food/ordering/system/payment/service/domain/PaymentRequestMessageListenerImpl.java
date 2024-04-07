@@ -12,7 +12,6 @@ public class PaymentRequestMessageListenerImpl implements PaymentRequestMessageL
 
     private final PaymentRequestHelper paymentRequestHelper;
 
-
     public PaymentRequestMessageListenerImpl(PaymentRequestHelper paymentRequestHelper) {
         this.paymentRequestHelper = paymentRequestHelper;
     }
@@ -25,7 +24,8 @@ public class PaymentRequestMessageListenerImpl implements PaymentRequestMessageL
 
     @Override
     public void cancelPayment(PaymentRequest paymentRequest) {
-        this.paymentRequestHelper.persistCancelPayment(paymentRequest);
+        PaymentEvent paymentEvent = this.paymentRequestHelper.persistCancelPayment(paymentRequest);
+        fireEvent(paymentEvent);
     }
 
     private void fireEvent(PaymentEvent paymentEvent) {
