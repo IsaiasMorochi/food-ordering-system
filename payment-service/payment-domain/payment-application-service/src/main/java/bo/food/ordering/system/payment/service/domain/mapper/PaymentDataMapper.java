@@ -5,7 +5,6 @@ import bo.food.ordering.system.domain.vo.Money;
 import bo.food.ordering.system.domain.vo.OrderId;
 import bo.food.ordering.system.payment.service.domain.dto.PaymentRequest;
 import bo.food.ordering.system.payment.service.domain.entity.Payment;
-import bo.food.ordering.system.payment.service.domain.event.PaymentEvent;
 import org.springframework.stereotype.Component;
 
 import java.util.UUID;
