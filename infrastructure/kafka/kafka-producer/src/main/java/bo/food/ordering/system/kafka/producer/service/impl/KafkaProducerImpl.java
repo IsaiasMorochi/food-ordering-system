@@ -2,7 +2,7 @@ package bo.food.ordering.system.kafka.producer.service.impl;
 
 import bo.food.ordering.system.kafka.producer.exception.KafkaProducerException;
 import bo.food.ordering.system.kafka.producer.service.KafkaProducer;
-import jakarta.annotation.PreDestroy;
+import javax.annotation.PreDestroy;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.avro.specific.SpecificRecordBase;
 import org.springframework.kafka.KafkaException;

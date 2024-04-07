@@ -1,7 +1,7 @@
 package bo.food.ordering.system.order.service.dataaccess.order.entity;
 
 import bo.food.ordering.system.domain.vo.OrderStatus;
-import jakarta.persistence.*;
+import javax.persistence.*;
 import lombok.*;
 
 import java.math.BigDecimal;
