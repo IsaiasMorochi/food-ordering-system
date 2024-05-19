@@ -17,20 +17,22 @@ import java.util.stream.Collectors;
 public class RestaurantDataMapper {
 
     public Restaurant restaurantApprovalRequestToRestaurant(RestaurantApprovalRequest
-                                                                             restaurantApprovalRequest) {
+                                                                    restaurantApprovalRequest) {
         return Restaurant.builder()
                 .restaurantId(new RestaurantId(UUID.fromString(restaurantApprovalRequest.getRestaurantId())))
-                .orderDetail(OrderDetail.builder()
-                        .orderId(new OrderId(UUID.fromString(restaurantApprovalRequest.getOrderId())))
-                        .products(restaurantApprovalRequest.getProducts().stream().map(
-                                product -> Product.builder()
-                                        .productId(product.getId())
-                                        .quantity(product.getQuantity())
-                                        .build())
-                                .collect(Collectors.toList()))
-                        .totalAmount(new Money(restaurantApprovalRequest.getPrice()))
-                        .orderStatus(OrderStatus.valueOf(restaurantApprovalRequest.getRestaurantOrderStatus().name()))
-                        .build())
+                .orderDetail(
+                        OrderDetail.builder()
+                                .orderId(new OrderId(UUID.fromString(restaurantApprovalRequest.getOrderId())))
+                                .products(
+                                        restaurantApprovalRequest.getProducts().stream().map(
+                                                        product -> Product.builder()
+                                                                .productId(product.getId())
+                                                                .quantity(product.getQuantity())
+                                                                .build())
+                                                .collect(Collectors.toList()))
+                                .totalAmount(new Money(restaurantApprovalRequest.getPrice()))
+                                .orderStatus(OrderStatus.valueOf(restaurantApprovalRequest.getRestaurantOrderStatus().name()))
+                                .build())
                 .build();
     }
 
