@@ -1,9 +1,9 @@
-package com.food.ordering.system.payment.service.dataaccess.payment.adapter;
+package bo.food.ordering.system.payment.service.dataaccess.payment.adapter;
 
-import com.food.ordering.system.payment.service.dataaccess.payment.mapper.PaymentDataAccessMapper;
-import com.food.ordering.system.payment.service.dataaccess.payment.repository.PaymentJpaRepository;
-import com.food.ordering.system.payment.service.domain.entity.Payment;
-import com.food.ordering.system.payment.service.domain.ports.output.repository.PaymentRepository;
+import bo.food.ordering.system.payment.service.dataaccess.payment.mapper.PaymentDataAccessMapper;
+import bo.food.ordering.system.payment.service.dataaccess.payment.repository.PaymentJpaRepository;
+import bo.food.ordering.system.payment.service.domain.entity.Payment;
+import bo.food.ordering.system.payment.service.domain.ports.output.repository.PaymentRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
@@ -33,4 +33,5 @@ public class PaymentRepositoryImpl implements PaymentRepository {
         return paymentJpaRepository.findByOrderId(orderId)
                 .map(paymentDataAccessMapper::paymentEntityToPayment);
     }
+
 }

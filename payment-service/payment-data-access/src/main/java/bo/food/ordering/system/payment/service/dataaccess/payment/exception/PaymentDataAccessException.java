@@ -1,8 +1,9 @@
-package com.food.ordering.system.payment.service.dataaccess.payment.exception;
+package bo.food.ordering.system.payment.service.dataaccess.payment.exception;
 
-public class PaymentDataaccessException extends RuntimeException {
+public class PaymentDataAccessException extends RuntimeException {
 
-    public PaymentDataaccessException(String message) {
+    public PaymentDataAccessException(String message) {
         super(message);
     }
+
 }

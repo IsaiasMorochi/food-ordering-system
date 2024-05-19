@@ -1,10 +1,10 @@
-package com.food.ordering.system.payment.service.dataaccess.creditentry.adapter;
+package bo.food.ordering.system.payment.service.dataaccess.creditentry.adapter;
 
-import com.food.ordering.system.domain.valueobject.CustomerId;
-import com.food.ordering.system.payment.service.dataaccess.creditentry.mapper.CreditEntryDataAccessMapper;
-import com.food.ordering.system.payment.service.dataaccess.creditentry.repository.CreditEntryJpaRepository;
-import com.food.ordering.system.payment.service.domain.entity.CreditEntry;
-import com.food.ordering.system.payment.service.domain.ports.output.repository.CreditEntryRepository;
+import bo.food.ordering.system.domain.vo.CustomerId;
+import bo.food.ordering.system.payment.service.dataaccess.creditentry.mapper.CreditEntryDataAccessMapper;
+import bo.food.ordering.system.payment.service.dataaccess.creditentry.repository.CreditEntryJpaRepository;
+import bo.food.ordering.system.payment.service.domain.entity.CreditEntry;
+import bo.food.ordering.system.payment.service.domain.ports.output.repository.CreditEntryRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.Optional;
@@ -34,4 +34,5 @@ public class CreditEntryRepositoryImpl implements CreditEntryRepository {
                 .findByCustomerId(customerId.getValue())
                 .map(creditEntryDataAccessMapper::creditEntryEntityToCreditEntry);
     }
+
 }

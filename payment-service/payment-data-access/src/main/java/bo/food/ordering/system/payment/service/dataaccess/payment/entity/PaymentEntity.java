@@ -1,6 +1,6 @@
-package com.food.ordering.system.payment.service.dataaccess.payment.entity;
+package bo.food.ordering.system.payment.service.dataaccess.payment.entity;
 
-import com.food.ordering.system.domain.valueobject.PaymentStatus;
+import bo.food.ordering.system.domain.vo.PaymentStatus;
 import lombok.*;
 
 import javax.persistence.*;
@@ -39,4 +39,5 @@ public class PaymentEntity {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }

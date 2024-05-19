@@ -1,11 +1,11 @@
-package com.food.ordering.system.payment.service.dataaccess.credithistory.adapter;
+package bo.food.ordering.system.payment.service.dataaccess.credithistory.adapter;
 
-import com.food.ordering.system.domain.valueobject.CustomerId;
-import com.food.ordering.system.payment.service.dataaccess.credithistory.entity.CreditHistoryEntity;
-import com.food.ordering.system.payment.service.dataaccess.credithistory.mapper.CreditHistoryDataAccessMapper;
-import com.food.ordering.system.payment.service.dataaccess.credithistory.repository.CreditHistoryJpaRepository;
-import com.food.ordering.system.payment.service.domain.entity.CreditHistory;
-import com.food.ordering.system.payment.service.domain.ports.output.repository.CreditHistoryRepository;
+import bo.food.ordering.system.domain.vo.CustomerId;
+import bo.food.ordering.system.payment.service.dataaccess.credithistory.entity.CreditHistoryEntity;
+import bo.food.ordering.system.payment.service.dataaccess.credithistory.mapper.CreditHistoryDataAccessMapper;
+import bo.food.ordering.system.payment.service.dataaccess.credithistory.repository.CreditHistoryJpaRepository;
+import bo.food.ordering.system.payment.service.domain.entity.CreditHistory;
+import bo.food.ordering.system.payment.service.domain.ports.output.repository.CreditHistoryRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.List;

@@ -1,4 +1,4 @@
-package com.food.ordering.system.payment.service.dataaccess.creditentry.entity;
+package bo.food.ordering.system.payment.service.dataaccess.creditentry.entity;
 
 import lombok.*;
 
@@ -35,4 +35,5 @@ public class CreditEntryEntity {
     public int hashCode() {
         return Objects.hash(id);
     }
+
 }
