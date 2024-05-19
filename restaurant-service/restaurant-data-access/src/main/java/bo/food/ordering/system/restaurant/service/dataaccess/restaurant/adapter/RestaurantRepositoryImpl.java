@@ -1,10 +1,10 @@
-package bo.food.ordering.system.order.service.dataaccess.restaurant.adapter;
+package bo.food.ordering.system.restaurant.service.dataaccess.restaurant.adapter;
 
 import bo.food.ordering.system.dataaccess.restaurant.entity.RestaurantEntity;
 import bo.food.ordering.system.dataaccess.restaurant.repository.RestaurantJpaRepository;
-import bo.food.ordering.system.order.service.dataaccess.restaurant.mapper.RestaurantDataAccessMapper;
-import bo.food.ordering.system.order.service.domain.entity.Restaurant;
-import bo.food.ordering.system.order.service.domain.ports.output.repository.RestaurantRepository;
+import bo.food.ordering.system.restaurant.service.dataaccess.restaurant.mapper.RestaurantDataAccessMapper;
+import bo.food.ordering.system.restaurant.service.domain.entity.Restaurant;
+import bo.food.ordering.system.restaurant.service.domain.ports.output.repository.RestaurantRepository;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -32,4 +32,5 @@ public class RestaurantRepositoryImpl implements RestaurantRepository {
                         restaurantProducts);
         return restaurantEntities.map(restaurantDataAccessMapper::restaurantEntityToRestaurant);
     }
+
 }

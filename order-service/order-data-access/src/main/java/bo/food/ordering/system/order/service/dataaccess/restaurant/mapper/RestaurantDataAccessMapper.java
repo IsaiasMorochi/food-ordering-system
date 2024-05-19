@@ -1,7 +1,7 @@
 package bo.food.ordering.system.order.service.dataaccess.restaurant.mapper;
 
-import bo.food.ordering.system.order.service.dataaccess.restaurant.entity.RestaurantEntity;
-import bo.food.ordering.system.order.service.dataaccess.restaurant.exception.RestaurantDataAccessException;
+import bo.food.ordering.system.dataaccess.restaurant.entity.RestaurantEntity;
+import bo.food.ordering.system.dataaccess.restaurant.exception.RestaurantDataAccessException;
 import bo.food.ordering.system.domain.vo.Money;
 import bo.food.ordering.system.domain.vo.ProductId;
 import bo.food.ordering.system.domain.vo.RestaurantId;
