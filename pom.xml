@@ -71,7 +71,7 @@
             </dependency>
             <dependency>
                 <groupId>bo.food.ordering.system</groupId>
-                <artifactId>payment-dataaccess</artifactId>
+                <artifactId>payment-data-access</artifactId>
                 <version>${project.version}</version>
             </dependency>
             <dependency>
